@@ -84,9 +84,10 @@ const menuData = [
     { name: "Lemon Mint Shisha", category: "Shisha", description: "Refreshing lemon mint shisha", price: 80.00, image: "https://images.unsplash.com/photo-1567335406970-f56e52a71bce?w=400" },
 
     // Breakfast
-    { name: "Breakfast Option 2", category: "Breakfast", description: "Fried egg, bacon, toast, baked beans, fresh juice + hot drink", price: 80.00, image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=400" },
-    { name: "Breakfast Option 4", category: "Breakfast", description: "Scrambled egg, bacon, potatoes, vegetables, bread, tea/milo/coffee + seasonal fruit tray", price: 90.00, image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=400" },
     { name: "Breakfast Option 1", category: "Breakfast", description: "Tuna sandwich, 2 eggs, baked beans, fresh juice + hot drink", price: 70.00, image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=400" },
+    { name: "Breakfast Option 2", category: "Breakfast", description: "Fried egg, bacon, toast, baked beans, fresh juice + hot drink", price: 80.00, image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=400" },
+    { name: "Breakfast Option 3", category: "Breakfast", description: "Eggs, sausage, grilled tomatoes, slice of bread, fresh juice + hot drink", price: 70.00, image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=400" },
+    { name: "Breakfast Option 4", category: "Breakfast", description: "Scrambled egg, bacon, potatoes, vegetables, bread, tea/milo/coffee + seasonal fruit tray", price: 90.00, image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=400" },
     { name: "Breakfast Option 5", category: "Breakfast", description: "2 pancakes with jam, fruit cut, juice + hot drink", price: 60.00, image: "https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=400" },
 ];
 
