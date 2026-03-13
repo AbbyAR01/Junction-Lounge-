@@ -3,158 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junction Lounge - Restaurant & Bar | Cape Coast, Ghana</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Junction Lounge | Cape Coast, Ghana</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2><i class="fas fa-utensils"></i> Junction Lounge</h2>
+                <span class="logo-j">J</span>unction <span class="logo-l">L</span>ounge
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="#order" class="nav-link">Order Online</a></li>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#featured" class="nav-link">Menu</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#order" class="nav-link nav-cta">Order Now</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80" alt="Junction Lounge" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
         <div class="hero-content">
-            <h1>Good Food, Great Vibes</h1>
-            <p>Experience the best dining, music, and atmosphere at Junction Lounge — Cape Coast's favourite spot for food and fun.</p>
-            <div class="hero-buttons">
-                <a href="#menu" class="btn btn-primary">View Menu</a>
-                <a href="#order" class="btn btn-secondary">Order Now</a>
+            <p class="hero-tag">📍 Ekon Junction, Cape Coast, Ghana</p>
+            <h1 class="hero-title">Good Food.<br><em>Great Vibes.</em></h1>
+            <p class="hero-sub">Cape Coast's favourite spot for authentic Ghanaian cuisine, live music, karaoke &amp; unforgettable nights out.</p>
+            <div class="hero-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-text">4.7 on Google · 115+ reviews</span>
             </div>
-        </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Junction Lounge">
+            <div class="hero-btns">
+                <a href="#featured" class="btn btn-gold">View Menu</a>
+                <a href="#order" class="btn btn-outline">Order Online</a>
+            </div>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="menu-section">
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stat"><strong>4.7 ⭐</strong><span>Google Rating</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>115+</strong><span>Happy Reviews</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>9AM–12AM</strong><span>Open Daily</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>Free</strong><span>Parking</span></div>
+    </div>
+
+    <!-- Featured Menu -->
+    <section id="featured" class="featured-section">
         <div class="container">
-            <h2 class="section-title">Our Menu</h2>
-            <div class="menu-categories">
-                <button class="category-btn active" data-category="all">All</button>
-                <button class="category-btn" data-category="Mains">Mains</button>
-                <button class="category-btn" data-category="Sides">Sides</button>
-                <button class="category-btn" data-category="Drinks">Drinks</button>
+            <div class="section-header">
+                <p class="section-tag">Taste of Junction</p>
+                <h2 class="section-title">Menu Highlights</h2>
+                <p class="section-sub">A selection of our most loved dishes. All prices in Ghana Cedis (GH₵).</p>
             </div>
-            <div class="menu-grid" id="menu-grid">
-                <!-- Menu items loaded dynamically -->
+            <div class="menu-tabs" id="menu-tabs"></div>
+            <div class="menu-grid" id="menu-grid"></div>
+            <div class="menu-cta">
+                <p>We also serve Breakfast, Cocktails, Smoothies, Shisha &amp; much more!</p>
+                <a href="#contact" class="btn btn-gold">Call to Enquire</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="about-section">
         <div class="container">
-            <div class="about-content">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-img-main">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=700&q=80" alt="Junction Lounge Interior">
+                    </div>
+                    <div class="about-img-small">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80" alt="Food at Junction Lounge">
+                    </div>
+                </div>
                 <div class="about-text">
-                    <h2>About Junction Lounge</h2>
-                    <p>Located right at Ekon Junction in Cape Coast, Junction Lounge is your go-to destination for great food, live music, karaoke, and a warm, welcoming atmosphere. Whether it's a family outing, a date night, or a team event — we've got you covered.</p>
-                    <div class="features">
-                        <div class="feature">
-                            <i class="fas fa-music"></i>
-                            <span>Live Music & Karaoke</span>
+                    <p class="section-tag">Our Story</p>
+                    <h2 class="section-title">More Than Just a Restaurant</h2>
+                    <p>Located right at Ekon Junction in Cape Coast, Junction Lounge is where great food meets great company. Whether you're stopping in for a family outing, a romantic date night, or an office team bonding event — we have everything you need for an unforgettable time.</p>
+                    <p>Our kitchen serves an incredible spread of local Ghanaian favourites, fresh seafood, international dishes, cocktails and more — all prepared with love and care.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-music"></i></div>
+                            <div><strong>Live Music &amp; Karaoke</strong><span>Dance the night away</span></div>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-star"></i>
-                            <span>4.7 ⭐ Rated on Google</span>
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-utensils"></i></div>
+                            <div><strong>Diverse Menu</strong><span>Local food, seafood, pasta &amp; cocktails</span></div>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-parking"></i>
-                            <span>Free Parking Available</span>
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-parking"></i></div>
+                            <div><strong>Free Parking</strong><span>Convenient front parking space</span></div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon"><i class="fas fa-users"></i></div>
+                            <div><strong>Group Events</strong><span>Perfect for parties &amp; team events</span></div>
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" alt="Junction Lounge Interior">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-section">
+        <div class="container">
+            <div class="section-header light">
+                <p class="section-tag">Why Junction Lounge?</p>
+                <h2 class="section-title">The Junction Experience</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">🍽️</div>
+                    <h3>Authentic Ghanaian Cuisine</h3>
+                    <p>From Banku &amp; Tilapia to Fufu &amp; Light Soup — our local dishes are made with fresh ingredients and real Ghanaian flavour.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🎤</div>
+                    <h3>Live Entertainment</h3>
+                    <p>Enjoy karaoke sessions, live music, and DJ nights that keep the energy high all evening long.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🌙</div>
+                    <h3>Perfect at Night</h3>
+                    <p>The venue becomes especially cozy and beautiful after dark — the perfect atmosphere for a night out.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">👨‍👩‍👧</div>
+                    <h3>Family &amp; Group Friendly</h3>
+                    <p>Spacious seating, games available, and a welcoming team that goes above and beyond for you.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Order Section -->
+    <!-- Reviews -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">What People Are Saying</p>
+                <h2 class="section-title">Real Customer Reviews</h2>
+                <div class="overall-rating">
+                    <span class="big-rating">4.7</span>
+                    <div>
+                        <div class="big-stars">★★★★★</div>
+                        <span>Based on 115+ Google Reviews</span>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"The ambience was amazing with games available for everyone. We had a karaoke session which lit up the mood 10x higher. The food was great and attendants kept checking in. I will definitely recommend it for groups and cute couple date nights!"</p>
+                    <div class="reviewer"><div class="reviewer-avatar">A</div><div><strong>Google Reviewer</strong><span>via Google Maps</span></div></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Easily accessible location right at Ekon Junction. Serene atmosphere. Great place for a family outing with fresh air. The venue is much cozier at night. It has parking space at the front for customers."</p>
+                    <div class="reviewer"><div class="reviewer-avatar">B</div><div><strong>Google Reviewer</strong><span>via Google Maps</span></div></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"It has an aesthetically pleasing space, good music with very good and delicious meals. Can't even pick a favourite. The workers are very hospitable as well!"</p>
+                    <div class="reviewer"><div class="reviewer-avatar">C</div><div><strong>Google Reviewer</strong><span>via Google Maps</span></div></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p>"Very nice food! The staff is really nice and helpful. Overall a great experience!"</p>
+                    <div class="reviewer"><div class="reviewer-avatar">D</div><div><strong>Google Reviewer</strong><span>via Google Maps</span></div></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★☆</div>
+                    <p>"A charming and cozy pub at Ekon Junction, offering a unique intersection of art, cuisine, culture, and literature. The venue provides a serene atmosphere with an inviting ambiance."</p>
+                    <div class="reviewer"><div class="reviewer-avatar">E</div><div><strong>Travel Reviewer</strong><span>via Wanderlog</span></div></div>
+                </div>
+                <div class="review-card review-cta-card">
+                    <div class="review-cta-inner">
+                        <div class="big-stars">★★★★★</div>
+                        <h3>Enjoyed your visit?</h3>
+                        <p>Leave us a review on Google and help others discover Junction Lounge!</p>
+                        <a href="https://maps.app.goo.gl/Phuwwp8SvYDH4z6b9" target="_blank" class="btn btn-gold">Write a Review</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order -->
     <section id="order" class="order-section">
         <div class="container">
-            <h2 class="section-title">Order Online</h2>
-            <div class="order-content">
+            <div class="order-grid">
                 <div class="order-info">
-                    <h3>Quick & Easy Ordering</h3>
-                    <p>Browse our menu, place your order, and enjoy your meal at the lounge or as a pickup.</p>
-                    <div class="order-stats">
-                        <div><strong>4.7⭐</strong> Customer rating</div>
-                        <div><strong>9AM–12AM</strong> Open daily</div>
-                        <div><strong>+233 53 154 3058</strong> Call us</div>
+                    <p class="section-tag">Ready to Eat?</p>
+                    <h2 class="section-title">Place Your Order</h2>
+                    <p>Fill in your details and we'll get back to you to confirm your order for dine-in or pickup.</p>
+                    <div class="order-contact">
+                        <div class="order-contact-item"><i class="fas fa-phone"></i><span>+233 53 154 3058</span></div>
+                        <div class="order-contact-item"><i class="fas fa-clock"></i><span>Mon–Sun: 9:00 AM – 12:00 AM</span></div>
+                        <div class="order-contact-item"><i class="fas fa-map-marker-alt"></i><span>Nana Mbra IV Ave, Ekon Junction, Cape Coast</span></div>
                     </div>
                 </div>
                 <form class="order-form" id="order-form">
                     <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" required>
+                        <label>Your Name</label>
+                        <input type="text" placeholder="e.g. Kofi Mensah" required>
                     </div>
                     <div class="form-group">
-                        <label>Phone</label>
-                        <input type="tel" required>
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="e.g. 0551234567" required>
                     </div>
                     <div class="form-group">
-                        <label>Items</label>
-                        <textarea placeholder="Enter your order details here..." required></textarea>
+                        <label>Order Type</label>
+                        <select>
+                            <option>Dine-In</option>
+                            <option>Pickup</option>
+                        </select>
                     </div>
-                    <button type="submit" class="btn btn-primary full-width">Place Order</button>
+                    <div class="form-group">
+                        <label>Your Order</label>
+                        <textarea placeholder="e.g. Banku with Tilapia, Pina Colada x2..." required rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-gold full-width">Send Order Request</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact / Map -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Visit Us</h2>
-            <div class="contact-content">
+            <div class="contact-grid">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Nana Mbra IV Ave, Ekon Junction<br>Cape Coast, Ghana</p>
+                    <p class="section-tag">Find Us</p>
+                    <h2 class="section-title">Visit Junction Lounge</h2>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div><strong>Address</strong><span>Nana Mbra IV Ave, Ekon Junction<br>Cape Coast, Ghana</span></div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div><strong>Phone</strong><span>+233 53 154 3058</span></div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div><strong>Opening Hours</strong><span>Monday – Sunday<br>9:00 AM – 12:00 AM</span></div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+233 53 154 3058</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Hours</h4>
-                            <p>Mon–Sun: 9:00 AM – 12:00 AM</p>
-                        </div>
-                    </div>
+                    <a href="https://maps.app.goo.gl/Phuwwp8SvYDH4z6b9" target="_blank" class="btn btn-gold">Get Directions</a>
                 </div>
-                <div class="map-container">
+                <div class="map-wrapper">
                     <iframe
-                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=Junction+Lounge,Cape+Coast,Ghana&center=5.1220195,-1.2256421&zoom=15"
-                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.3!2d-1.2281421!3d5.1220195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfddffc799b68feb%3A0x20072a69fea1312a!2sJunction%20Lounge!5e0!3m2!1sen!2sgh!4v1710000000000!5m2!1sen!2sgh"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
                     </iframe>
                 </div>
             </div>
@@ -164,22 +279,35 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Junction Lounge</h3>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo"><span class="logo-j">J</span>unction <span class="logo-l">L</span>ounge</div>
                     <p>Cape Coast's favourite spot for great food, good music, and unforgettable moments.</p>
+                    <div class="footer-socials">
+                        <a href="https://maps.app.goo.gl/Phuwwp8SvYDH4z6b9" target="_blank" title="Google Maps"><i class="fab fa-google"></i></a>
+                    </div>
                 </div>
-                <div class="footer-section">
+                <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#featured">Menu</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
                         <li><a href="#order">Order Online</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
+                <div class="footer-hours">
+                    <h4>Opening Hours</h4>
+                    <p>Monday – Sunday</p>
+                    <p>9:00 AM – 12:00 AM</p>
+                    <br>
+                    <h4>Call Us</h4>
+                    <p>+233 53 154 3058</p>
+                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Junction Lounge. All rights reserved.</p>
+                <p>© 2025 Junction Lounge, Cape Coast Ghana. All rights reserved.</p>
             </div>
         </div>
     </footer>
