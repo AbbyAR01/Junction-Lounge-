@@ -11,34 +11,27 @@ app.use(express.static('public'));
 // Mock API (No database needed for demo)
 app.get('/api/menu', (req, res) => {
   const menu = [
-    {
-      _id: "1",
-      name: "Pho Bo",
-      category: "Pho",
-      description: "Traditional beef noodle soup with rare steak, brisket, and tendon",
-      price: 14.99,
-      image: "https://images.unsplash.com/photo-1512058564366-18510be2db14?w=400",
-      available: true
-    },
-    {
-      _id: "2",
-      name: "Pho Ga",
-      category: "Pho",
-      description: "Chicken pho with free-range chicken and fresh herbs",
-      price: 13.99,
-      image: "https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=400",
-      available: true
-    },
-    {
-      _id: "3",
-      name: "Bun Bo Hue",
-      category: "Noodle Soups",
-      description: "Spicy beef noodle soup from Hue with lemongrass and chili oil",
-      price: 15.99,
-      image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400",
-      available: true
-    },
-    {
+  {
+    _id: "1", name: "Signature Old Fashioned", category: "Cocktails",
+    description: "Bourbon, bitters, sugar, orange twist - our classic", price: 16.99,
+    image: "https://images.unsplash.com/photo-1575305265484-5588c3894a58?w=400"
+  },
+  {
+    _id: "2", name: "Truffle Fries", category: "Appetizers", 
+    description: "Hand-cut fries with truffle oil and parmesan", price: 12.99,
+    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400"
+  },
+  {
+    _id: "3", name: "Filet Mignon", category: "Mains",
+    description: "8oz prime filet, herb butter, seasonal vegetables", price: 48.99,
+    image: "https://images.unsplash.com/photo-1512568400610-3f3f73bed6a6?w=400"
+  },
+  {
+    _id: "4", name: "Chocolate Lava Cake", category: "Desserts",
+    description: "Warm chocolate cake with molten center, vanilla ice cream", price: 14.99,
+    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400"
+  }
+];
       _id: "4",
       name: "Com Tam",
       category: "Rice Dishes",
